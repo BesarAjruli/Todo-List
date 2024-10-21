@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <script
+      src="https://kit.fontawesome.com/95f1909cfa.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="main.js"></script></head>
+  <body>
+    <main>
+      <div>
+        <div id="sideMenu">
+          <div id="projectContainer"></div>
+        </div>
+
+        <div id="listContent">
+          <div>
+            <div>
+              <div class="circle-progress"></div>
+              <h1 id="title"></h1>
+              <i class="fa-regular fa-pen-to-square"></i>
+              <i class="fa-solid fa-trash" id="delete"></i>
+            </div>
+            <p id="description"></p>
+            <p id="date"></p>
+            <ul id="checkContainers"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div>
+      <span id="addNew"
+        ><i class="fa-solid fa-plus"></i> Add a new project</span
+      >
+    </div>
+
+    <dialog>
+      <i class="fa-solid fa-xmark"></i>
+
+      <form id="project">
+        <label for="projectTitle">Name</label><br />
+        <input type="text" id="projectTitle" />
+        <br /><br />
+        <label for="projectDescription">Description</label><br />
+        <input type="text" id="projectDescription" />
+        <br /><br />
+        <button type="button" id="submitProject">Submit</button>
+      </form>
+
+      <form id="list">
+        <h2 id="projectNameInList"></h2>
+        <label for="listTitle">List Name</label><br />
+        <input type="text" name="listTitle" id="listTitle" />
+        <br /><br />
+        <label for="content">Content</label><br />
+        <textarea name="content" id="content" cols="50" rows="10"></textarea>
+        <br /><br />
+        <label for="dueDate">Due Date</label><br />
+        <input type="date" id="dueDate" name="dueDate" />
+        <br /><br />
+        <label for="checkList">Things to check</label> <br />
+        <input type="text" id="checkListField" name="checkListField" /><br />
+        <button id="checkList" type="button">Add</button>
+        <div id="checkListContainer"></div>
+        <br /><br />
+        <button type="button" id="submit">Submit</button>
+      </form>
+    </dialog>
+  </body>
+</html>
